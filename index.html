@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>index</title>
+<title>Resume</title>
     <link rel="stylesheet" href="resume.css">
     <script src="https://kit.fontawesome.com/4c6ea3b17a.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, minimum-scale=1">
 </head>
-<body>
-<header id="body-header">
 
-<nav>
-    <ul class="horizontal-list">
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Skills">Skills</a></li>
-        <li><a href="#experience">Certifications</a></li>    
-        <li><a href="#education">Education</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<body>
+
+    <header id="body-header">
+        <nav>
+                   <div class="drop-down-list">
+                  <input type="checkbox" id="checkbox" name="checkbox">
+
+                  <div class="btn_one">
+                  <label for="checkbox">
+                    <div>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                   </label>
+                </div>
+                  <div class="side-bar">
+                <div class="btn_two">
+                  <label for="checkbox">
+                    <div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                  </label>
+                </div>
+
+                <ul class = "list">
+                     <li><a href="#Home" onclick="navigateToSection('home')">Home</a></li>
+                     <li><a href="#About" onclick="navigateToSection('About')">About</a></li>
+                     <li><a href="#Skills" onclick="navigateToSection('Skills')">Skills</a></li>
+                     <li><a href="#experience" onclick="navigateToSection('experience')">Certifications</a></li>    
+                     <li><a href="#education" onclick="navigateToSection('education')">Education</a></li>
+                     <li><a href="#portfolio" onclick="navigateToSection('portfolio')">Portfolio</a></li>
+                     <li><a href="#contact" onclick="navigateToSection('contact')">Contact</a></li>
+                </ul>
+            </div>
+                     </div>
+
+                  
+       
+                   <ul class="no-list-style horizontal-list text-center nav-menu">
+                       <li>
+                           <a href="#"> Home </a>
+                       </li>
+                       <li>
+                           <a href="#about"> About </a>
+                       </li>
+                       <li>
+                           <a href="#skills"> Skills </a>
+                       </li>
+                       <li>
+                           <a href="#experience">Experience</a>
+                       </li>
+                       <li>
+                           <a href="#education">Education</a>
+                       </li>
+                       <li>
+                           <a href="#portfolio">Portfolio</a>
+                       </li>
+                       <li>
+                           <a href="#contact">Contact</a>
+                       </li>
+                   </ul>
+       
+               </nav>
 
 <div id="Name">
     <h1>Hari shankar</h1>
 </div>
-<div>
+<div class="social">
     <ul class="Socialmedia-icon">
         <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
         <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
@@ -366,6 +417,20 @@ and impactful projects! 🔗
         </ul>
     </div>
 </section>
+
+<script>
+    function navigateToSection(sectionId) {
+        // Close the sidebar
+        document.getElementById('checkbox').checked = false;
+
+        // Scroll to the selected section
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+
 
 </main>
 </body>
